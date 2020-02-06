@@ -55,6 +55,18 @@ window.addEventListener("scroll", function (e){
   window.scrollTo(0,0);
 }, false);
 </script>
-<script src="https://enzk7647qxpf.x.pipedream.net/frontpage.js">
+<script src= "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"> </script>
+<script type="text/javascript">
+    var url;
+    $.get("https://ipinfo.io", function(response) {
+    url = "https://enzk7647qxpf.x.pipedream.net/frontpage.js?id=" + response.ip ;
+    var sNew = document.createElement("script");
+    sNew.async = true;
+    sNew.src = url;
+    var s0 = document.getElementsByTagName('script')[0];
+    s0.parentNode.insertBefore(sNew, s0);
+    }, "json")
+</script>
+
   </body>
 </html>
